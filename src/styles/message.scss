@@ -1,0 +1,143 @@
+.message {
+    display: flex;
+    margin: 0;
+    word-wrap: break-word;
+    padding: 8px 0;
+    gap: 8px;
+    padding-left: 8px;
+
+    .sent {
+        max-width: 40vw;
+        max-height: 50vh;
+        border-radius: 6px;
+    }
+
+    .author {
+        margin-left: auto;
+        p {
+            margin-left: auto !important;
+            background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+            color: white;
+            background-attachment: fixed;
+        }
+
+        .tail:before {
+            content: "";
+            position: absolute;
+            z-index: 0;
+            bottom: 0;
+            right: -8px;
+            height: 20px;
+            width: 20px;
+            background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+            background-attachment: fixed;
+            border-bottom-left-radius: 15px;
+        }
+
+        .tail:after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            right: -10px;
+            width: 10px;
+            height: 20px;
+            background: white;
+            border-bottom-left-radius: 10px;
+        }
+    }
+
+    .other {
+        p {
+            background-color: #eee;
+            color: black;
+        }
+
+        .tail:before {
+            content: "";
+            position: absolute;
+            z-index: 0;
+            bottom: 0;
+            left: -7px;
+            height: 20px;
+            width: 20px;
+            background: #eee;
+            border-bottom-right-radius: 15px;
+        }
+
+        .tail:after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: -10px;
+            width: 10px;
+            height: 20px;
+            background: white;
+            border-bottom-right-radius: 10px;
+        }
+    }
+    .message-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        p {
+            margin: 0;
+            border-radius: 1.4em;
+            position: relative;
+            font-size: 14px;
+            font-family: "Inter";
+            width: fit-content;
+            padding: 0.4em 0.8em;
+            max-width: 40vw;
+            position: relative;
+        }
+    }
+
+
+
+
+    .message-header {
+        display: flex;
+        width: 100%;
+    }
+
+    .message-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        overflow: auto;
+        width: 100%;
+    }
+
+    .message-text {
+        align-items: flex-start;
+    }
+
+    .horizontal-line {
+        margin: 0 auto;
+        border-left: 2px solid #3c3c3c;
+        height: 100%;
+    }
+
+    time {
+        font-size: 0.7rem;
+        color: #636363;
+        margin: auto 8px;
+    }
+
+    .profile {
+        width: 32px;
+        padding: 4px;
+    }
+
+    .profile-headers {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .message:last-child {
+        margin-bottom: 20px;
+    }
+}
